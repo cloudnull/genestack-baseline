@@ -1,0 +1,22 @@
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: openstack-external
+  namespace: metallb-system
+spec:
+  addresses:
+    - 172.16.25.140/32  # This is assumed to be the public LB vip address
+    - 172.16.25.141/32
+  autoAssign: false
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: openstack-external-advertisement
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+    - openstack-external
+  interfaces:  # Optional block to limit ifaces used to advertise VIPs
+    - br-mgmt

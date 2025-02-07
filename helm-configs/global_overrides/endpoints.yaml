@@ -1,0 +1,205 @@
+_region: &region SAT0
+
+endpoints:
+  compute:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: nova.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  compute_metadata:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: metadata.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  compute_novnc_proxy:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: novnc.api.cloudnull.dev
+    port:
+      novnc_proxy:
+        public: 443
+    scheme:
+      public: https
+  cloudformation:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: cloudformation.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  cloudwatch:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: cloudwatch.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  container_infra:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: magnum.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  dashboard:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: cloud.api.cloudnull.dev
+    port:
+      web:
+        public: 443
+    scheme:
+      public: https
+  identity:
+    auth:
+      admin:
+        region_name: *region
+      barbican:
+        region_name: *region
+      cinder:
+        region_name: *region
+      designate:
+        region_name: *region
+      glance:
+        region_name: *region
+      heat:
+        region_name: *region
+      heat_trustee:
+        region_name: *region
+      heat_stack_user:
+        region_name: *region
+      ironic:
+        region_name: *region
+      magnum:
+        region_name: *region
+      magnum_stack_user:
+        region_name: *region
+      neutron:
+        region_name: *region
+      nova:
+        region_name: *region
+      placement:
+        region_name: *region
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: keystone.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  image:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: glance.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  key_manager:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: barbican.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  load_balancer:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: octavia.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  network:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: neutron.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  orchestration:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: heat.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  oslo_messaging:
+    statefulset:
+      replicas: 1
+  placement:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: placement.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  volume:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: cinder.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  volumev2:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: cinder.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https
+  volumev3:
+    host_fqdn_override:
+      public:
+        tls: {}
+        host: cinder.api.cloudnull.dev
+    port:
+      api:
+        public: 443
+    scheme:
+      public: https

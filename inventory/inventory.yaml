@@ -1,0 +1,72 @@
+---
+all:
+  vars:
+    cloud_name: "cloudnull-sat0"
+    ansible_python_interpreter: "/usr/bin/python3"
+    ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
+    # ansible_ssh_private_key_file: /home/rack/.ssh/ospc-flex-dfw3
+  hosts:
+    compute-0.cloud.cloudnull.dev.local:
+      ansible_host: 172.16.27.67
+    compute-1.cloud.cloudnull.dev.local:  # Used as deployment host
+      ansible_host: 172.16.27.34
+      ansible_connection: local
+      ansible_python_interpreter: /root/.venvs/genestack/bin/python3
+    compute-2.cloud.cloudnull.dev.local:
+      ansible_host: 172.16.27.113
+  children:
+    k8s_cluster:
+      vars:
+        cluster_name: cluster.local
+        kube_ovn_central_hosts: '{{ groups["ovn_network_nodes"] }}'
+        kube_ovn_default_interface_name: br-mgmt
+        kube_ovn_iface: br-mgmt
+      children:
+        # OpenStack Controllers
+        openstack_control_plane:
+          hosts:
+            compute-1.cloud.cloudnull.dev.local: null
+            compute-2.cloud.cloudnull.dev.local: null
+            compute-0.cloud.cloudnull.dev.local: null
+        # Edge Nodes
+        ovn_network_nodes:
+          hosts:
+            compute-1.cloud.cloudnull.dev.local: null
+            compute-2.cloud.cloudnull.dev.local: null
+            compute-0.cloud.cloudnull.dev.local: null
+        # Tenant Prod Nodes
+        openstack_compute_nodes:
+          vars:
+            enable_iscsi: true
+            custom_multipath: false
+          hosts:
+            compute-1.cloud.cloudnull.dev.local: null
+            compute-2.cloud.cloudnull.dev.local: null
+            compute-0.cloud.cloudnull.dev.local: null
+        # Block Nodes
+        storage_nodes:
+          vars:
+            enable_iscsi: true
+            custom_multipath: false
+          hosts:
+            compute-1.cloud.cloudnull.dev.local: null
+            compute-2.cloud.cloudnull.dev.local: null
+            compute-0.cloud.cloudnull.dev.local: null
+        # ETCD Nodes
+        etcd:
+          hosts:
+            compute-1.cloud.cloudnull.dev.local: null
+            compute-2.cloud.cloudnull.dev.local: null
+            compute-0.cloud.cloudnull.dev.local: null
+        # Kubernetes Nodes
+        kube_control_plane:
+          hosts:
+            compute-1.cloud.cloudnull.dev.local: null
+            compute-2.cloud.cloudnull.dev.local: null
+            compute-0.cloud.cloudnull.dev.local: null
+        kube_node:
+          hosts:
+            compute-1.cloud.cloudnull.dev.local: null
+            compute-2.cloud.cloudnull.dev.local: null
+            compute-0.cloud.cloudnull.dev.local: null
+

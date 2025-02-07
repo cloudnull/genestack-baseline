@@ -1,0 +1,62 @@
+---
+conf:
+  nova:
+    DEFAULT:
+      osapi_compute_workers: 2
+      metadata_workers: 2
+    conductor:
+      workers: 2
+    schedule:
+      workers: 2
+    oslo_messaging_notifications:
+      driver: noop
+    pci:
+      alias:
+        type: multistring
+        values:
+          - '{"vendor_id": "8086", "product_id": "4680", "device_type": "type-VF", "name": "iGPU", "numa_policy": "preferred"}'
+          - '{"vendor_id": "10de", "product_id": "1c30", "device_type": "type-PCI", "name": "p2000", "numa_policy": "preferred"}'
+          - '{"vendor_id": "10de", "product_id": "10f1", "device_type": "type-PCI", "name": "p2000-audio", "numa_policy": "preferred"}'
+          - '{"vendor_id": "10de", "product_id": "2571", "device_type": "type-PCI", "name": "a2000", "numa_policy": "preferred"}'
+          - '{"vendor_id": "10de", "product_id": "228e", "device_type": "type-PCI", "name": "a2000-audio", "numa_policy": "preferred"}'
+    filter_scheduler:
+      enabled_filters: >-
+        ComputeFilter,ComputeCapabilitiesFilter,ImagePropertiesFilter,ServerGroupAntiAffinityFilter,ServerGroupAffinityFilter,AggregateInstanceExtraSpecsFilter,PciPassthroughFilter
+      available_filters: nova.scheduler.filters.all_filters
+  overrides:
+    nova_compute:
+      labels:
+        - label:
+            key: openstack-compute-cpu-type
+            values:
+              - "amd-3900"
+          conf:
+            nova:
+              DEFAULT:
+                reserved_host_cpus: "1"
+              pci:
+                device_spec: >-
+                  [{"address": "0000:0a:00.0"},
+                   {"address": "0000:0a:00.1"},
+                   {"address": "0000:0b:00.0"},
+                   {"address": "0000:0b:00.1"}]
+        - label:
+            key: openstack-compute-cpu-type
+            values:
+              - "intel-12700"
+          conf:
+            nova:
+              compute:
+                cpu_shared_set: "0-15"
+                reserved_host_cpus: "1"
+              pci:
+                device_spec: >-
+                  [{"address":"0000:00:02.1"},
+                   {"address":"0000:00:02.2"},
+                   {"address":"0000:00:02.3"},
+                   {"address":"0000:00:02.4"},
+                   {"address":"0000:00:02.5"},
+                   {"address":"0000:00:02.6"},
+                   {"address":"0000:00:02.7"}]
+
+

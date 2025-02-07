@@ -1,0 +1,7 @@
+---
+conf:
+  magnum:
+    oslo_messaging_notifications:
+      driver: noop
+    trust:
+      cluster_user_trust: true

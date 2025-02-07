@@ -1,0 +1,6 @@
+---
+conf:
+  placement:
+    oslo_messaging_notifications:
+      driver: noop
+

@@ -1,0 +1,13 @@
+---
+roles: app
+proxyAddr: teleport.cloudnull.dev:443
+apps:
+  - name: openwebui
+    uri: http://172.16.25.162:3000
+    rewrite:
+      redirect:
+      - "openwebui.teleport.cloudnull.dev"
+      headers:
+      - "Host: openwebui.teleport.cloudnull.dev"
+      - "Origin: https://openwebui.teleport.cloudnull.dev"
+      - "X-Request-Base: https://openwebui.teleport.cloudnull.dev"

@@ -1,0 +1,6 @@
+---
+conf:
+  barbican:
+    oslo_messaging_notifications:
+      driver: noop
+

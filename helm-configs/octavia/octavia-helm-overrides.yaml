@@ -1,0 +1,7 @@
+---
+conf:
+  octavia:
+    controller_worker:
+      workers: 2
+    oslo_messaging_notifications:
+      driver: noop

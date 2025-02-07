@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: teleport
+spec:
+  type: ClusterIP
+  ports:
+    - name: tp-web
+      port: 80
+      protocol: TCP
+    - name: tp-tls
+      port: 443
+      protocol: TCP
+    - name: tp-proxy
+      port: 3023
+      protocol: TCP
+    - name: tp-tun
+      port: 3024
+      protocol: TCP
+    - name: tp-auth
+      port: 3025
+      protocol: TCP

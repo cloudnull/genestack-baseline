@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: teleport
+  annotations:
+    kubernetes.io/ingress.allow-http: "true"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: cloudnull.dev
+    http:
+      paths:
+      - backend:
+          service:
+            name: teleport
+            port:
+              name: tp-tls
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - cloudnull.dev
+    secretName: teleport-tls-public

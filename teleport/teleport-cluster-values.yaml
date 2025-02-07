@@ -1,0 +1,26 @@
+clusterName: teleport.cloudnull.dev
+chartMode: standalone
+proxyListenerMode: multiplex
+#proxyProtocol: "off"
+acme: false
+publicAddr:
+  - teleport.cloudnull.dev:443
+authentication:
+  type: github
+  localAuth: true
+proxy:
+  highAvailability:
+    replicaCount: 1
+highAvailability:
+  replicaCount: 1
+  podDisruptionBudget:
+    enabled: true
+  certManager:
+    enabled: true
+    issuerName: "letsencrypt-production"
+    addCommonName: true
+    addPublicAddrs: true
+ingress:
+  enabled: false
+log:
+  level: DEBUG

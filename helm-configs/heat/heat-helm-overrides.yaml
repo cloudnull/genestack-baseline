@@ -1,0 +1,13 @@
+---
+conf:
+  heat:
+    DEFAULT:
+      num_engine_workers: 2
+    heat_api:
+      workers: 2
+    heat_api_cloudwatch:
+      workers: 2
+    heat_api_cfn:
+      workers: 2
+    oslo_messaging_notifications:
+      driver: noop

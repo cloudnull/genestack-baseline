@@ -1,0 +1,33 @@
+[
+    {
+        "op": "add",
+        "path": "/spec/listeners/-",
+        "value": {
+            "name": "http-api-wildcard-listener",
+            "port": 80,
+            "protocol": "HTTP",
+            "hostname": "*.api.cloudnull.dev",
+            "allowedRoutes": {
+                "namespaces": {
+                    "from": "All"
+                }
+            }
+        }
+    },
+    {
+        "op": "add",
+        "path": "/spec/listeners/-",
+        "value": {
+            "name": "http-wildcard-listener",
+            "port": 80,
+            "protocol": "HTTP",
+            "hostname": "*.cloudnull.dev",
+            "allowedRoutes": {
+                "namespaces": {
+                    "from": "All"
+                }
+            }
+        }
+    }
+
+]

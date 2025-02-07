@@ -1,0 +1,4 @@
+conf:
+  ceilometer:
+    oslo_messaging_notifications:
+      driver: noop

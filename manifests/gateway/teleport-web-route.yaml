@@ -1,0 +1,14 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: TCPRoute
+metadata:
+  name: teleport-web-gateway-route
+spec:
+  parentRefs:
+  - name: teleport-gateway
+    sectionName: teleport-web
+  hostnames:
+  - "teleport.cloudnull.dev"
+  rules:
+    - backendRefs:
+      - name: teleport-cluster
+        port: 443
