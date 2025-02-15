@@ -139,3 +139,5 @@ tuned_profile: balanced
 # Cinder Enabled Backends
 cinder_backend_name: "lvmdriver-1"
 
+# Octavia
+octavia_os_region_name: SAT0

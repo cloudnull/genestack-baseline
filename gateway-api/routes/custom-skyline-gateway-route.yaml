@@ -14,7 +14,7 @@ spec:
     sectionName: skyline-https
     namespace: nginx-gateway
   hostnames:
-  - "cloud.cloudnull.dev"
+  - "skyline.api.cloudnull.dev"
   rules:
     - backendRefs:
       - name: skyline-apiserver

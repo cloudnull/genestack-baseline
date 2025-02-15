@@ -1,17 +1,16 @@
----
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: custom-magnum-gateway-route
-  namespace: openstack
+  name: internal-loki-gateway-route
+  namespace: grafana
 spec:
   parentRefs:
   - name: flex-gateway
-    sectionName: magnum-https
+    sectionName: loki-http
     namespace: nginx-gateway
   hostnames:
-  - "magnum.api.cloudnull.dev"
+  - "internal.loki-gateway.api.cloudnull.dev"
   rules:
     - backendRefs:
-      - name: magnum-api
-        port: 9511
+      - name: loki-gateway
+        port: 80

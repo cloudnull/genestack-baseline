@@ -1,6 +1,8 @@
 ---
 conf:
   octavia:
+    DEFAULT:
+      debug: true
     controller_worker:
       workers: 2
     oslo_messaging_notifications:

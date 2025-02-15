@@ -1,4 +1,23 @@
 ---
+images:
+  tags:
+    neutron_db_sync: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_dhcp: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_l3: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_l2gw: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_linuxbridge_agent: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_metadata: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_ovn_metadata: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_openvswitch_agent: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_server: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_rpc_server: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_bagpipe_bgp: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_netns_cleanup_cron: "ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397"
+    neutron_sriov_agent: ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397
+    neutron_sriov_agent_init: ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397
+    neutron_bgp_dragent: ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397
+    neutron_ironic_agent: ghcr.io/cloudnull/genestack/neutron-oslodb:2024.1-ubuntu_jammy-1739635397
+
 conf:
   neutron:
     DEFAULT:
@@ -7,3 +26,4 @@ conf:
       rpc_state_report_workers: 1
     oslo_messaging_notifications:
       driver: noop
+  bgp_dragent: {}

@@ -1,6 +1,3 @@
-longhornManager:
-  nodeSelector:
-    longhorn.io/storage-node: "enabled"
 longhornDriver:
   nodeSelector:
     longhorn.io/storage-node: "enabled"

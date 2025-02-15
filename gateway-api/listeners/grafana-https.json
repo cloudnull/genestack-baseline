@@ -3,10 +3,10 @@
         "op": "add",
         "path": "/spec/listeners/-",
         "value": {
-            "name": "skyline-https",
+            "name": "grafana-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "skyline.api.cloudnull.dev",
+            "hostname": "grafana.api.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"
@@ -17,7 +17,7 @@
                     {
                         "group": "",
                         "kind": "Secret",
-                        "name": "skyline-gw-tls-secret"
+                        "name": "grafana-gw-tls-secret"
                     }
                 ],
                 "mode": "Terminate"

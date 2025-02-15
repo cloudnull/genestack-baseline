@@ -1,0 +1,4 @@
+networking:
+  IFACE: "br-mgmt"
+  vlan:
+    VLAN_INTERFACE_NAME: "br-mgmt"

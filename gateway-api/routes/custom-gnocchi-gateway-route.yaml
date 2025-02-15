@@ -2,20 +2,20 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: custom-octavia-gateway-route
+  name: custom-gnocchi-gateway-route
   namespace: openstack
   labels:
     application: gateway-api
     service: HTTPRoute
-    route: octavia
+    route: gnocchi
 spec:
   parentRefs:
   - name: flex-gateway
-    sectionName: octavia-https
+    sectionName: gnocchi-https
     namespace: nginx-gateway
   hostnames:
-  - "octavia.api.cloudnull.dev"
+  - "gnocchi.api.cloudnull.dev"
   rules:
     - backendRefs:
-      - name: octavia-api
-        port: 9876
+      - name: gnocchi-api
+        port: 8041

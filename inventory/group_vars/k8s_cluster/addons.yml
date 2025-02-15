@@ -172,7 +172,7 @@ cert_manager_controller_extra_args:
 #   - "--dns01-recursive-nameservers=1.1.1.1:53,8.8.8.8:53"
 
 # MetalLB deployment
-metallb_enabled: true
+metallb_enabled: false
 metallb_namespace: metallb-system
 metallb_speaker_enabled: "{{ metallb_enabled }}"
 # metallb_version: v0.13.9

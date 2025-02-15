@@ -101,6 +101,8 @@ endpoints:
         region_name: *region
       placement:
         region_name: *region
+      octavia:
+        region_name: *region
     host_fqdn_override:
       public:
         tls: {}

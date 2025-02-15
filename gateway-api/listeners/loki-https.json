@@ -3,10 +3,10 @@
         "op": "add",
         "path": "/spec/listeners/-",
         "value": {
-            "name": "http-wildcard-listener",
+            "name": "loki-http",
             "port": 80,
             "protocol": "HTTP",
-            "hostname": "*.cloudnull.dev",
+            "hostname": "internal.loki-gateway.api.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

@@ -22,6 +22,10 @@ all:
         kube_ovn_default_interface_name: br-mgmt
         kube_ovn_iface: br-mgmt
       children:
+        broken_etcd:
+          children: null
+        broken_kube_control_plane:
+          children: null
         # OpenStack Controllers
         openstack_control_plane:
           hosts:
@@ -48,6 +52,10 @@ all:
           vars:
             enable_iscsi: true
             custom_multipath: false
+          children:
+            cinder_storage_nodes:
+              hosts:
+                compute-0.cloud.cloudnull.dev.local: null
           hosts:
             compute-1.cloud.cloudnull.dev.local: null
             compute-2.cloud.cloudnull.dev.local: null

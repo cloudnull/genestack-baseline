@@ -2,7 +2,7 @@
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: openstack-external
+  name: gateway-api-external
   namespace: metallb-system
 spec:
   addresses:
@@ -17,6 +17,6 @@ metadata:
   namespace: metallb-system
 spec:
   ipAddressPools:
-    - openstack-external
+    - gateway-api-external
   interfaces:  # Optional block to limit ifaces used to advertise VIPs
     - br-mgmt

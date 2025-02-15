@@ -3,4 +3,5 @@ conf:
   keystone:
     oslo_messaging_notifications:
       driver: noop
-
+  rackspace:
+    role_attribute_enforcement: true
