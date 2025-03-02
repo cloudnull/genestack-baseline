@@ -3,7 +3,13 @@ conf:
   octavia:
     DEFAULT:
       debug: true
-    controller_worker:
-      workers: 2
     oslo_messaging_notifications:
       driver: noop
+    controller_worker:
+      loadbalancer_topology: SINGLE
+      workers: 2
+  octavia_api_uwsgi:
+    uwsgi:
+      processes: 2
+      threads: 1
+

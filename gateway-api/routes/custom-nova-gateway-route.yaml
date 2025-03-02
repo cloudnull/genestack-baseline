@@ -12,9 +12,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: nova-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "nova.api.cloudnull.dev"
+  - "nova.cloudnull.dev"
   rules:
     - backendRefs:
       - name: nova-api

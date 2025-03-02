@@ -6,7 +6,7 @@
             "name": "heat-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "heat.api.cloudnull.dev",
+            "hostname": "heat.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

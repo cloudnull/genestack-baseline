@@ -2,16 +2,16 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: custom-keystone-gateway-route
-  namespace: openstack
+  name: custom-prometheus-gateway-route
+  namespace: prometheus
 spec:
   parentRefs:
   - name: flex-gateway
-    sectionName: keystone-https
+    sectionName: http
     namespace: envoy-gateway
   hostnames:
-  - "keystone.cloudnull.dev"
+  - "prometheus.cloudnull.dev"
   rules:
     - backendRefs:
-      - name: keystone-api
-        port: 5000
+      - name: kube-prometheus-stack-prometheus
+        port: 9090

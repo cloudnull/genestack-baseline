@@ -7,9 +7,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: loki-http
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "internal.loki-gateway.api.cloudnull.dev"
+  - "internal.loki-gateway.cloudnull.dev"
   rules:
     - backendRefs:
       - name: loki-gateway

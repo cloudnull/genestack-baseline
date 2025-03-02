@@ -12,9 +12,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: neutron-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "neutron.api.cloudnull.dev"
+  - "neutron.cloudnull.dev"
   rules:
     - backendRefs:
       - name: neutron-server

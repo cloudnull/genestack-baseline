@@ -6,7 +6,7 @@
             "name": "grafana-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "grafana.api.cloudnull.dev",
+            "hostname": "grafana.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

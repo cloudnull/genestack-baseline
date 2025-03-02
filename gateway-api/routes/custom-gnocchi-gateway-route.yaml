@@ -12,9 +12,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: gnocchi-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "gnocchi.api.cloudnull.dev"
+  - "gnocchi.cloudnull.dev"
   rules:
     - backendRefs:
       - name: gnocchi-api

@@ -6,7 +6,7 @@
             "name": "barbican-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "barbican.api.cloudnull.dev",
+            "hostname": "barbican.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

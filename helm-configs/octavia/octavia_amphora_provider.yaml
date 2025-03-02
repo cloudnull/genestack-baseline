@@ -100,13 +100,13 @@ conf:
     certificates:
       ca_certificate: /etc/octavia/certs/server_ca.cert.pem
       ca_private_key: /etc/octavia/certs/private/server_ca.key.pem
-      ca_private_key_passphrase: qO07GVqE3ofMb0TL2rnK8Pd1Swa8zlEn
+      ca_private_key_passphrase: Qes09SH7bdeLqPYVgL6n7OaPqWnYom17
     controller_worker:
       client_ca: /etc/octavia/certs/client_ca.cert.pem
       amp_image_owner_id: 56434d857d6642a2b4f6a0e6513b3d3e
       amp_secgroup_list: d86375b2-a9c9-4c47-9336-4e9f4e970759
       amp_flavor_id: 67aed335-de8e-4ae7-91f6-953feab465a8
-      amp_boot_network_list: 94e76914-e59c-4cfd-9a49-dd0d5ed98d8d
+      amp_boot_network_list: 657935e5-0364-49a8-bd41-2d31bd2233f0
       amp_image_tag: amphora
       amp_ssh_key_name: amphora-ssh-key
     haproxy_amphora:
@@ -115,4 +115,4 @@ conf:
     health_manager:
       bind_port: 5555
       bind_ip: 0.0.0.0
-      controller_ip_port_list:  172.16.29.112:5555, 172.16.29.208:5555, 172.16.29.250:5555
+      controller_ip_port_list:  172.16.29.185:5555, 172.16.29.77:5555, 172.16.29.218:5555

@@ -6,7 +6,7 @@
             "name": "glance-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "glance.api.cloudnull.dev",
+            "hostname": "glance.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

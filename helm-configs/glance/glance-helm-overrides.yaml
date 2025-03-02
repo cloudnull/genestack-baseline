@@ -1,10 +1,46 @@
 ---
+bootstrap:
+  enabled: false
+
+storage: pvc
+
+images:
+  tags:
+    glance_metadefs_load: ghcr.io/cloudnull/genestack/glance:2024.1-ubuntu_jammy-1740256226
+    glance_db_sync: ghcr.io/cloudnull/genestack/glance:2024.1-ubuntu_jammy-1740256226
+    glance_api: ghcr.io/cloudnull/genestack/glance:2024.1-ubuntu_jammy-1740256226
+
 conf:
   glance:
     DEFAULT:
-      workers: 2
+      debug: false
+      cinder_use_multipath: false
+      cinder_enforce_multipath: false
+      enabled_backends: swift:swift
+    glance_store:
+      default_backend: swift
+      default_store: swift
     oslo_messaging_notifications:
       driver: noop
+  glance_api_uwsgi:
+    uwsgi:
+      processes: 2
+  swift_store: |
+    [ref1]
+    auth_address = https://keystone.api.sjc3.rackspacecloud.com/v3
+    auth_version = 3
+    project_domain_id =
+    project_domain_name = rackspace_cloud_domain
+    swift_buffer_on_upload = true
+    swift_store_container = glance
+    swift_store_create_container_on_put = true
+    swift_store_endpoint_type = publicURL
+    swift_store_multi_tenant = false
+    swift_store_region = SJC3
+    swift_upload_buffer_dir = /var/lib/glance/images
+    user_domain_id =
+    user_domain_name = rackspace_cloud_domain
+
 volume:
   class_name: general
   size: 20Gi

@@ -6,7 +6,7 @@
             "name": "magnum-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "magnum.api.cloudnull.dev",
+            "hostname": "magnum.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

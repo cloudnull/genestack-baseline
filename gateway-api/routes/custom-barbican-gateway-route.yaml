@@ -8,9 +8,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: barbican-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "barbican.api.cloudnull.dev"
+  - "barbican.cloudnull.dev"
   rules:
     - backendRefs:
       - name: barbican-api

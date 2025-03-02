@@ -12,9 +12,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: http-wildcard-listener
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "*.api.cloudnull.dev"
+  - "*.cloudnull.dev"
   rules:
     - filters:
       - type: RequestRedirect

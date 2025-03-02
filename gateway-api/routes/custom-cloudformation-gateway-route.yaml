@@ -12,9 +12,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: cloudformation-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "cloudformation.api.cloudnull.dev"
+  - "cloudformation.cloudnull.dev"
   rules:
     - backendRefs:
       - name: heat-cfn

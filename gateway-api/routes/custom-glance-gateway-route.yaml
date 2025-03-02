@@ -12,10 +12,23 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: glance-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "glance.api.cloudnull.dev"
+  - "glance.cloudnull.dev"
   rules:
     - backendRefs:
       - name: glance-api
         port: 9292
+---
+apiVersion: gateway.nginx.org/v1alpha1
+kind: ClientSettingsPolicy
+metadata:
+  name: gateway-client-settings
+  namespace: envoy-gateway
+spec:
+  targetRef:
+    group: gateway.networking.k8s.io
+    kind: Gateway
+    name: flex-gateway
+  body:
+    maxSize: "120g" # sizes without a unit are bytes.

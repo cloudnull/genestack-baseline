@@ -1,5 +1,8 @@
 ---
 conf:
+  barbican_api_uwsgi:
+    uwsgi:
+      processes: 2
   barbican:
     oslo_messaging_notifications:
       driver: noop

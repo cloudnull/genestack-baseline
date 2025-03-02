@@ -6,7 +6,7 @@
             "name": "keystone-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "keystone.api.cloudnull.dev",
+            "hostname": "keystone.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

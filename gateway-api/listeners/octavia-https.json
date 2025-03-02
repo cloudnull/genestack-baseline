@@ -6,7 +6,7 @@
             "name": "octavia-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "octavia.api.cloudnull.dev",
+            "hostname": "octavia.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

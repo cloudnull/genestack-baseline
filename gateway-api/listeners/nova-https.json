@@ -6,7 +6,7 @@
             "name": "nova-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "nova.api.cloudnull.dev",
+            "hostname": "nova.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

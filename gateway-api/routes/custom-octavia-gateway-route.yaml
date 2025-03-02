@@ -12,9 +12,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: octavia-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "octavia.api.cloudnull.dev"
+  - "octavia.cloudnull.dev"
   rules:
     - backendRefs:
       - name: octavia-api

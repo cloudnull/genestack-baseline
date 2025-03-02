@@ -6,7 +6,7 @@
             "name": "neutron-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "neutron.api.cloudnull.dev",
+            "hostname": "neutron.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

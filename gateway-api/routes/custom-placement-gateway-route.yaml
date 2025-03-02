@@ -12,9 +12,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: placement-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "placement.api.cloudnull.dev"
+  - "placement.cloudnull.dev"
   rules:
     - backendRefs:
       - name: placement-api

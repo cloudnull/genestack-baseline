@@ -6,7 +6,7 @@
             "name": "placement-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "placement.api.cloudnull.dev",
+            "hostname": "placement.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

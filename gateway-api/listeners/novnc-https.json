@@ -6,7 +6,7 @@
             "name": "novnc-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "novnc.api.cloudnull.dev",
+            "hostname": "novnc.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

@@ -6,7 +6,7 @@
             "name": "cloudformation-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "cloudformation.api.cloudnull.dev",
+            "hostname": "cloudformation.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

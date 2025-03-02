@@ -6,7 +6,7 @@
             "name": "loki-http",
             "port": 80,
             "protocol": "HTTP",
-            "hostname": "internal.loki-gateway.api.cloudnull.dev",
+            "hostname": "internal.loki-gateway.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

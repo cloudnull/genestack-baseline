@@ -8,9 +8,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: magnum-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "magnum.api.cloudnull.dev"
+  - "magnum.cloudnull.dev"
   rules:
     - backendRefs:
       - name: magnum-api

@@ -6,7 +6,7 @@
             "name": "gnocchi-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "gnocchi.api.cloudnull.dev",
+            "hostname": "gnocchi.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

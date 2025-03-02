@@ -6,7 +6,7 @@
             "name": "cinder-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "cinder.api.cloudnull.dev",
+            "hostname": "cinder.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

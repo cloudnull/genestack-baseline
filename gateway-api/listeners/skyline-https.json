@@ -6,7 +6,7 @@
             "name": "skyline-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "skyline.api.cloudnull.dev",
+            "hostname": "skyline.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

@@ -6,7 +6,7 @@
             "name": "metadata-https",
             "port": 443,
             "protocol": "HTTPS",
-            "hostname": "metadata.api.cloudnull.dev",
+            "hostname": "metadata.cloudnull.dev",
             "allowedRoutes": {
                 "namespaces": {
                     "from": "All"

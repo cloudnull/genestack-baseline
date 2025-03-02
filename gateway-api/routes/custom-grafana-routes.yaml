@@ -5,12 +5,16 @@ metadata:
   namespace: grafana
 spec:
   hostnames:
-  - grafana.api.cloudnull.dev
+  - grafana.cloudnull.dev
+  - "grafana.cluster.local"
+  - "grafana"
+  - "grafana.grafana"
+  - "grafana.grafana.svc.cluster.local"
   parentRefs:
   - group: gateway.networking.k8s.io
     kind: Gateway
     name: flex-gateway
-    namespace: nginx-gateway
+    namespace: envoy-gateway
     sectionName: grafana-https
   rules:
   - backendRefs:

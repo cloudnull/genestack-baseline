@@ -12,9 +12,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: skyline-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "skyline.api.cloudnull.dev"
+  - "skyline.cloudnull.dev"
   rules:
     - backendRefs:
       - name: skyline-apiserver

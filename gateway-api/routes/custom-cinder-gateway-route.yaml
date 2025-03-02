@@ -12,9 +12,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: cinder-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "cinder.api.cloudnull.dev"
+  - "cinder.cloudnull.dev"
   rules:
     - backendRefs:
       - name: cinder-api

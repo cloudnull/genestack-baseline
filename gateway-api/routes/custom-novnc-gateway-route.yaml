@@ -12,9 +12,9 @@ spec:
   parentRefs:
   - name: flex-gateway
     sectionName: novnc-https
-    namespace: nginx-gateway
+    namespace: envoy-gateway
   hostnames:
-  - "novnc.api.cloudnull.dev"
+  - "novnc.cloudnull.dev"
   rules:
     - backendRefs:
       - name: nova-novncproxy
